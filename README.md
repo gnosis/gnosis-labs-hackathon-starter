@@ -46,6 +46,8 @@ All the questions are guaranteed to be about the future and to be in a binary ye
 
 You can play with the prompts, different approaches, different LLMs, search engines, or anything you can think of.
 
+The code can be messy, the only thing we ask you is for it to be reproducible on our machines, and to help with that, there is `mypy` as the only check of CI pipeline on Github.
+
 ### Experimenting
 
 Run 
