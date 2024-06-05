@@ -1,6 +1,8 @@
-# gnosis-labs-zuberlin2024
+# Gnosis Labs ZuBerlin 2024
 
-Repository for the hackathon run by Gnosis Labs at ZuBerlin 2024.
+Welcome to the Gnosis AI ZuBerlin 2024 Hackathon repo! Here you will find all you need to build a tool for AI Agents that can make predictions on outcomes of future events.
+
+Follow the instructions below to get started.
 
 ## Support
 
