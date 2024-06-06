@@ -45,7 +45,7 @@ def main(
         agents=[
             RandomAgent(agent_name="random"),
             QuestionOnlyAgent(),
-            PredictionAgent(),
+            ParticipantPredictionAgent(),
         ],
     )
 
@@ -80,11 +80,11 @@ class QuestionOnlyAgent(AbstractBenchmarkedAgent):
             return Prediction()
 
 
-class PredictionAgent(AbstractBenchmarkedAgent):
+class ParticipantPredictionAgent(AbstractBenchmarkedAgent):
     def __init__(
         self,
         model: str = DEFAULT_MODEL,
-        agent_name: str = "prediction",
+        agent_name: str = "your-agent",
         max_workers: int = 1,
     ):
         super().__init__(agent_name=agent_name, max_workers=max_workers)
