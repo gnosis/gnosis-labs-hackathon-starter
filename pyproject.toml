@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "trader"
+version = "0.1.0"
+description = ""
+authors = ["Gnosis Labs <ai@gnosis.io>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.10.0"
+prediction-market-agent-tooling = { version = "^0.34.0" }
+prediction-prophet = { git = "https://github.com/polywrap/predictionprophet.git", branch = "main" }
+pydantic-settings = "^2.1.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.1"
+mypy = "^1.8.0"
+black = "^23.12.1"
+autoflake = "^2.2.1"
+isort = "^5.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
