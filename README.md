@@ -50,6 +50,20 @@ You can play with the prompts, different approaches, different LLMs, search engi
 
 The code can be messy, the only thing we ask you is for it to be reproducible on our machines, and to help with that, there is `mypy` as the only check of CI pipeline on Github.
 
+A few ideas to jump start your experiments:
+
+On the research side:
+
+- Scrape multiple search engines
+- Scrape different kinds of sources depending on question type
+- Trying different methods for extracting valuable information from each site
+- Handling cases where two sources contain conflicting information
+
+On the prediction side:
+
+- Have an ensemble of agents making predictions, and taking an average or other aggregation method
+- Currently the LLM returns a float, and this is converted to a binary Yes/No answer by thresholding at 0.5. Experiment with having the LLM return different kinds of answers (e.g. categorical)
+
 ### Testing your experiments
 
 Run 
