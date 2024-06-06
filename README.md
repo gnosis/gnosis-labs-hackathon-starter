@@ -2,6 +2,8 @@
 
 Welcome to the Gnosis AI ZuBerlin 2024 Hackathon repo! Here you will find all you need to build a tool for AI Agents that can make predictions on outcomes of future events.
 
+[Presentation available here.](https://docs.google.com/presentation/d/1gajA3m5p_X4R4oyNc80p5_uSYZz0z2R-YKxm0RQnz_4/edit?usp=sharing)
+
 Follow the instructions below to get started.
 
 ## Support
