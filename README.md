@@ -2,6 +2,8 @@
 
 Welcome to the Gnosis AI ZuBerlin 2024 Hackathon repo! Here you will find all you need to build a tool for AI Agents that can make predictions on outcomes of future events.
 
+[Presentation available here.](https://docs.google.com/presentation/d/1gajA3m5p_X4R4oyNc80p5_uSYZz0z2R-YKxm0RQnz_4/edit?usp=sharing)
+
 Follow the instructions below to get started.
 
 ## Support
@@ -50,7 +52,21 @@ You can play with the prompts, different approaches, different LLMs, search engi
 
 The code can be messy, the only thing we ask you is for it to be reproducible on our machines, and to help with that, there is `mypy` as the only check of CI pipeline on Github.
 
-### Experimenting
+A few ideas to jump start your experiments:
+
+On the research side:
+
+- Scrape multiple search engines
+- Scrape different kinds of sources depending on question type
+- Trying different methods for extracting valuable information from each site
+- Handling cases where two sources contain conflicting information
+
+On the prediction side:
+
+- Have an ensemble of agents making predictions, and taking an average or other aggregation method
+- Currently the LLM returns a float, and this is converted to a binary Yes/No answer by thresholding at 0.5. Experiment with having the LLM return different kinds of answers (e.g. categorical)
+
+### Testing your experiments
 
 Run 
 
@@ -78,10 +94,18 @@ The idea is that markets on Manifold are mostly answered by real people, so the 
 
 Bear in mind your LLM credits, Tavily credits or any other paid 3rd provider credits when running the benchmark, as it answers many markets in a single run, which can be very costly.
 
+Run 
+
+```bash
+python trader/main.py
+```
+
+the script will place bets on random 10 markets from https://aiomen.eth.limo, these won't be used for the final evaluation, but you can double-check that all works as expected.
+
 ### Submission
 
-1. Run `python trader/main.py`, it will place bets on all markets that will be used for the evaluation. You can run the script multiple times, but we will always look only at the latest bet on the market from your public key.
-2. Open a PR against this repository with your implementation and public key used for placing bets.
+1. Run `python trader/main.py --final`, it will place bets on all markets that will be used for the evaluation. You can run the script multiple times, but we will always look only at the latest bet on the market from your public key. If you get no markets found error, either we didn't open them yet, or they are already closed and it's too late for the submission. 
+2. Once you are happy with your agent's predictions, open a PR against this repository with your implementation and public key used for placing bets. This is your submission.
 3. Make sure the CI pipeline is all green.
 
 ### Evaluation

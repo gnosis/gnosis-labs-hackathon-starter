@@ -1,4 +1,5 @@
 import typer
+from dotenv import load_dotenv
 from prediction_market_agent_tooling.benchmark.agents import (
     AbstractBenchmarkedAgent,
     RandomAgent,
@@ -17,7 +18,7 @@ from prediction_market_agent_tooling.markets.markets import (
     get_binary_markets,
 )
 from prediction_prophet.benchmark.agents import _make_prediction
-from dotenv import load_dotenv
+
 from trader.prediction import DEFAULT_MODEL, predict
 
 
@@ -45,7 +46,7 @@ def main(
         agents=[
             RandomAgent(agent_name="random"),
             QuestionOnlyAgent(),
-            PredictionAgent(),
+            ParticipantPredictionAgent(),
         ],
     )
 
@@ -80,11 +81,11 @@ class QuestionOnlyAgent(AbstractBenchmarkedAgent):
             return Prediction()
 
 
-class PredictionAgent(AbstractBenchmarkedAgent):
+class ParticipantPredictionAgent(AbstractBenchmarkedAgent):
     def __init__(
         self,
         model: str = DEFAULT_MODEL,
-        agent_name: str = "prediction",
+        agent_name: str = "your-agent",
         max_workers: int = 1,
     ):
         super().__init__(agent_name=agent_name, max_workers=max_workers)

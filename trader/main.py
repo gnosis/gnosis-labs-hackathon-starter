@@ -1,3 +1,5 @@
+import random
+
 import pandas as pd
 import typer
 from dotenv import load_dotenv
@@ -11,8 +13,12 @@ from prediction_market_agent_tooling.tools.utils import utcnow
 
 from trader.prediction import predict
 
+MARKET_CREATOR_USED_FOR_EVALUATION = HexAddress(
+    HexStr("0xa7E93F5A0e718bDDC654e525ea668c64Fd572882")
+)
 
-def main(creator: str = "0xa7E93F5A0e718bDDC654e525ea668c64Fd572882") -> None:
+
+def main(final: bool = False) -> None:
     # Load the environment variables.
     load_dotenv()
 
@@ -20,12 +26,17 @@ def main(creator: str = "0xa7E93F5A0e718bDDC654e525ea668c64Fd572882") -> None:
     markets = OmenSubgraphHandler().get_omen_binary_markets(
         limit=None,
         opened_after=utcnow(),
-        creator=HexAddress(HexStr(creator)),
+        # If `final` is True, get all markets created by the specified creator that will be used for the evaluation of the winner.
+        creator=MARKET_CREATOR_USED_FOR_EVALUATION if final else None,
     )
 
     if not markets:
         logger.error("No markets found, please try again later.")
         return
+
+    # If this isn't for the final evaluation, just bet on random 10 markets.
+    if not final:
+        markets = random.sample(markets, k=min(10, len(markets)))
 
     results: dict[str, list[str | bool | None]] = {
         "market_id": [],
