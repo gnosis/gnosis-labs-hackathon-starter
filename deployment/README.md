@@ -1,4 +1,4 @@
-# Deployment of agents (Work in progress)
+# Deployment of agents
 
 This folder contains scripts for quickly deploying your agent to a cloud provider (Modal) and have it executed on a cron schedule. Additionally, a local setup is also provided.
 
@@ -27,8 +27,3 @@ modal run deployment/local_runner.py
 ```shell
 modal deploy --name execute_agent deployment/remote_runner.py
 ```
-
-# Todo
-- Improve README
-- Define agent function
-- make cron_runner and local_runner call same function (from agent)
