@@ -81,7 +81,7 @@ Bear in mind your LLM credits, Tavily credits or any other paid 3rd provider cre
 ### Submission
 
 1. Run `python trader/main.py`, it will place bets on all markets that will be used for the evaluation. You can run the script multiple times, but we will always look only at the latest bet on the market from your public key.
-2. Open a PR against this repository with your implementation and public key used for placing bets.
+2. Once you are happy with your agent's predictions, open a PR against this repository with your implementation and public key used for placing bets. This is your submission.
 3. Make sure the CI pipeline is all green.
 
 ### Evaluation
