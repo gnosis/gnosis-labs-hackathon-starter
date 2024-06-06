@@ -92,9 +92,17 @@ The idea is that markets on Manifold are mostly answered by real people, so the 
 
 Bear in mind your LLM credits, Tavily credits or any other paid 3rd provider credits when running the benchmark, as it answers many markets in a single run, which can be very costly.
 
+Run 
+
+```bash
+python trader/main.py
+```
+
+the script will place bets on random 10 markets from https://aiomen.eth.limo, these won't be used for the final evaluation, but you can double-check that all works as expected.
+
 ### Submission
 
-1. Run `python trader/main.py`, it will place bets on all markets that will be used for the evaluation. You can run the script multiple times, but we will always look only at the latest bet on the market from your public key.
+1. Run `python trader/main.py --final`, it will place bets on all markets that will be used for the evaluation. You can run the script multiple times, but we will always look only at the latest bet on the market from your public key. If you get no markets found error, either we didn't open them yet, or they are already closed and it's too late for the submission. 
 2. Once you are happy with your agent's predictions, open a PR against this repository with your implementation and public key used for placing bets. This is your submission.
 3. Make sure the CI pipeline is all green.
 

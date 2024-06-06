@@ -1,4 +1,5 @@
 import typer
+from dotenv import load_dotenv
 from prediction_market_agent_tooling.benchmark.agents import (
     AbstractBenchmarkedAgent,
     RandomAgent,
@@ -17,7 +18,7 @@ from prediction_market_agent_tooling.markets.markets import (
     get_binary_markets,
 )
 from prediction_prophet.benchmark.agents import _make_prediction
-from dotenv import load_dotenv
+
 from trader.prediction import DEFAULT_MODEL, predict
 
 
