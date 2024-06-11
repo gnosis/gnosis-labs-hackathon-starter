@@ -6,6 +6,12 @@ Welcome to the Gnosis AI ZuBerlin 2024 Hackathon repo! Here you will find all yo
 
 Follow the instructions below to get started.
 
+## Bounties 💸
+
+- 1st place $1k
+- 2nd place $750
+- 3rd place $250
+
 ## Support
 
 Contact us at https://t.me/+Fb0trLKZdMw2MTQ8.
