@@ -1,12 +1,7 @@
-from eth_typing import HexAddress, HexStr
-from prediction_market_agent_tooling.markets.omen.omen_subgraph_handler import OmenSubgraphHandler
-
+from trader.main import main as trader_main
 
 def run():
-    # This class entails the agent logic for placing bets.
-    # It could call for example the main() function from the trader folder.
-    market_id = HexAddress(HexStr("0x57c6bab1ba758d911f11e67ef323acebcfca04b7"))
+    # Calls the trader agent for placing bets.
     print("Started function execution")
-    market = OmenSubgraphHandler().get_omen_market_by_market_id(market_id)
-    print(f"market {market}")
+    trader_main()
     print("Finished function execution")
