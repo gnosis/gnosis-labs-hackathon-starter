@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "trader"
+name = "general_agent"
 version = "0.1.0"
 description = ""
 authors = ["Gnosis Labs <ai@gnosis.io>"]

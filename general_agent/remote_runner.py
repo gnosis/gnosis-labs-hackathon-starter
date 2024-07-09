@@ -21,5 +21,5 @@ app = App(image=image)
 @app.function(
     schedule=Period(minutes=5), secrets=[Secret.from_dotenv(path_to_env.as_posix())]
 )
-def execute_remote():
+def execute_remote() -> None:
     main()
