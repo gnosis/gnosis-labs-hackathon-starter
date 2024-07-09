@@ -1,7 +1,10 @@
 import os
 
 from eth_account import Account
-from eth_typing import ChecksumAddress, Wei
+from eth_typing import ChecksumAddress
+from web3.types import (  # noqa: F401  # Import for the sake of easy importing with others from here.
+    Wei,
+)
 from microchain import Function
 from web3 import Web3
 
