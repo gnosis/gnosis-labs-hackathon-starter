@@ -1,6 +1,6 @@
-# Gnosis Labs ZuBerlin 2024
+# Gnosis Labs Hackathon starter
 
-Welcome to the Gnosis AI EthGlobal 2024 Hackathon repo! Here you will find all you need to build a tool for AI Agents that can make predictions on outcomes of future events.
+Welcome to the Gnosis AI Hackathon repo! Here you will find all you need to build a tool for AI Agents that can make predictions on outcomes of future events.
 
 Follow the instructions below to get started.
 
