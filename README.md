@@ -41,6 +41,7 @@ By default the script will do only very tiny bets (0.00001 xDai per market), but
 ## Task - General agent
 
 [Description](https://ethglobal.com/events/brussels/prizes/circles)
+[Documentation](https://gnosis-labs.gitbook.io/gnosis-labs)
 
 There are multiple avenues to explore with such a general agent. Ultimately we want it to thrive in the blockchain and be an autonomous agent ([some even claim it can be an alternate form of life](https://www.youtube.com/watch?v=Y4QKEJehYBg&t=6103s&ab_channel=DappConBerlin)).
 
